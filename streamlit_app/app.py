@@ -641,7 +641,10 @@ def main():
                 if ft in show_fac:
                     st.markdown(f"""<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><div style="width:10px;height:10px;border-radius:50%;background:{fc};flex-shrink:0"></div><span style="font-size:.72rem;color:{C['text_b']}">{ft}</span></div>""",unsafe_allow_html=True)
             if show_prop:
-                st.markdown(f"""<div style="border-top:1px solid {C['border']};margin-top:10px;padding-top:10px"><div style="font-size:.6rem;text-transform:uppercase;letter-spacing:1.2px;color:{C['text_m']};font-weight:700;margin-bottom:8px">Proposed</div>{''.join([f"<div style='display:flex;align-items:center;gap:7px;margin-bottom:5px'><span style='color:{PRIORITY_COLOURS[p]};font-size:12px'>★</span><span style='font-size:.7rem;color:{C[\"text_b\"]}'>{p} Priority</span></div>" for p in ["Critical","High","Medium"]])}</div>""",unsafe_allow_html=True)
+                prop_items = ""
+                for p in ["Critical","High","Medium"]:
+                    prop_items += f"<div style='display:flex;align-items:center;gap:7px;margin-bottom:5px'><span style='color:{PRIORITY_COLOURS[p]};font-size:12px'>&#9733;</span><span style='font-size:.7rem;color:{C["text_b"]}'>{p} Priority</span></div>"
+                st.markdown(f"<div style='border-top:1px solid {C['border']};margin-top:10px;padding-top:10px'><div style='font-size:.6rem;text-transform:uppercase;letter-spacing:1.2px;color:{C['text_m']};font-weight:700;margin-bottom:8px'>Proposed</div>" + prop_items + "</div>", unsafe_allow_html=True)
 
     with tab2:
         c1,c2=st.columns(2)

@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large raw data file — download separately from KMHFL
+data/healthcare_facilities.json
+
+# Generated outputs — run load_real_data.py + accessibility_analysis.py
+data/facilities_nairobi.geojson
+data/settlements.geojson
+data/proposed_sites.geojson
+data/population_grid.csv
+data/accessibility_scores.csv
+data/subcounty_summary.csv
+data/coverage_stats.json
+data/proposed_site_scores.csv
+
+# IDE
+.vscode/
+.idea/
+.DS_Store

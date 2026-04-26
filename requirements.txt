@@ -1,0 +1,29 @@
+# Nairobi Health Facility Access Atlas
+# Python 3.10+ required
+
+# ── Geospatial ─────────────────────────────────────────────────────
+geopandas==0.14.4
+folium==0.17.0
+streamlit-folium==0.22.0
+shapely==2.0.6
+pyproj==3.6.1
+fiona==1.9.6
+rtree==1.2.0
+
+# ── Data ───────────────────────────────────────────────────────────
+numpy==1.26.4
+pandas==2.2.3
+
+# ── Visualisation ──────────────────────────────────────────────────
+plotly==5.24.1
+matplotlib==3.9.2
+seaborn==0.13.2
+contextily==1.6.0
+
+# ── Dashboard ──────────────────────────────────────────────────────
+streamlit==1.40.2
+
+# ── Dev ────────────────────────────────────────────────────────────
+jupyter==1.1.1
+black==24.10.0
+ruff==0.7.1
